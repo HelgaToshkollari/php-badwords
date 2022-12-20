@@ -28,20 +28,28 @@ $text =  $_POST["userText"];
     <main class="container ">
         <div class="row p-4 d-flex justify-content-center text-center ">
             <div class="col">
-            <h2>This is your original paragraph: </h2>  
-                <div>
+                <h2>This is your original paragraph: </h2>  
+                <div class="border rounded-4">
                     <h4><?php echo $text ?></h4>
                 </div>
+               
         
-
             </div>
-            <div class="col">
+            <div class="col  ">
                 <h2> This is the censored version: </h2>
-                    <div >
-                        <h4><?php echo str_replace($word, "***", $text) ?></h4>
-                    </div>    
+                <div class="border rounded-4 ">
+                    <h4><?php echo str_replace($word, "***", $text) ?></h4>
+                </div>    
             </div>
         </div>
+        <div class="row p-4 d-flex justify-content-center text-center ">
+            <div class="col">
+                <div class="border rounded-pill">
+                    <h6> length of the paragraph: <?php echo strlen($text) ?> characters</h6>
+                </div>
+            </div>
+        </div>
+
     </main>
     
 </body>
